@@ -44,6 +44,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="51j-7T-mmt"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vfa-P7-tRx">
                                 <rect key="frame" x="294.5" y="140.5" width="48" height="39"/>
@@ -81,7 +84,11 @@
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <navigationItem key="navigationItem" title="Kantor" id="eai-K9-9ds">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Vnc-i1-W4U"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Vnc-i1-W4U">
+                            <connections>
+                                <action selector="actionHideUserInputs:" destination="9pv-A4-QxB" id="kKv-0Q-6Dv"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="currencyButton" destination="Vfa-P7-tRx" id="rxv-67-Y6e"/>
