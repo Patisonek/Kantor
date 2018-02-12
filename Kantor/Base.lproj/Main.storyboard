@@ -83,6 +83,13 @@
                     <navigationItem key="navigationItem" title="Kantor" id="eai-K9-9ds">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="Vnc-i1-W4U"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="currencyButton" destination="Vfa-P7-tRx" id="rxv-67-Y6e"/>
+                        <outlet property="exchangeLabel" destination="lOg-76-rMc" id="xWO-Py-Ywt"/>
+                        <outlet property="hideUserInputsButton" destination="Vnc-i1-W4U" id="3xv-2n-0pI"/>
+                        <outlet property="segmentedControl" destination="VpZ-Iw-dnG" id="cY0-Mt-gjE"/>
+                        <outlet property="userAmountTextField" destination="snn-8V-O8B" id="aqK-18-oS1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>

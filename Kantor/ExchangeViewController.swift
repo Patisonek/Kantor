@@ -10,6 +10,19 @@ import UIKit
 
 class ExchangeViewController: UIViewController {
 
+    
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
+    @IBOutlet weak var userAmountTextField: UITextField!
+    
+    @IBOutlet weak var currencyButton: UIButton!
+    
+    @IBOutlet weak var exchangeLabel: UILabel!
+    
+    @IBOutlet weak var hideUserInputsButton: UIBarButtonItem!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
