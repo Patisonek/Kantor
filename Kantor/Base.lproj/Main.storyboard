@@ -23,30 +23,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="jEa-FE-Fnf">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="jEa-FE-Fnf">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="VpZ-Iw-dnG">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="VpZ-Iw-dnG">
                                 <rect key="frame" x="150" y="85" width="75" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="sell"/>
                                     <segment title="buy"/>
                                 </segments>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </segmentedControl>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="snn-8V-O8B">
-                                <rect key="frame" x="139" y="148" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="snn-8V-O8B">
+                                <rect key="frame" x="87.5" y="148" width="200" height="31"/>
                                 <color key="backgroundColor" red="0.33333333333333331" green="0.72549019607843135" blue="0.84313725490196079" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="9Ai-dK-uf8"/>
+                                    <constraint firstAttribute="width" constant="200" id="mb2-aD-ldA"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vfa-P7-tRx">
-                                <rect key="frame" x="261" y="144" width="47" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vfa-P7-tRx">
+                                <rect key="frame" x="294.5" y="140.5" width="48" height="39"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="USD">
@@ -54,9 +54,8 @@
                                     <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10 000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOg-76-rMc">
-                                <rect key="frame" x="124" y="206" width="147" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOg-76-rMc">
+                                <rect key="frame" x="113.5" y="214" width="148" height="58"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="48"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -65,10 +64,24 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lOg-76-rMc" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="2Bs-mr-Eec"/>
+                            <constraint firstItem="snn-8V-O8B" firstAttribute="top" secondItem="VpZ-Iw-dnG" secondAttribute="bottom" constant="35" id="OQL-hS-g1G"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="jEa-FE-Fnf" secondAttribute="trailing" id="QJ3-U6-T2o"/>
+                            <constraint firstItem="Vfa-P7-tRx" firstAttribute="baseline" secondItem="snn-8V-O8B" secondAttribute="baseline" id="Qxq-XX-XUt"/>
+                            <constraint firstItem="jEa-FE-Fnf" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="aRH-nE-Rnr"/>
+                            <constraint firstItem="snn-8V-O8B" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="d7D-Uv-WPG"/>
+                            <constraint firstItem="Vfa-P7-tRx" firstAttribute="leading" secondItem="snn-8V-O8B" secondAttribute="trailing" constant="7" id="gsz-g0-lEK"/>
+                            <constraint firstItem="jEa-FE-Fnf" firstAttribute="bottom" secondItem="PQr-Ze-W5v" secondAttribute="bottom" constant="49" id="hgn-GM-EmI"/>
+                            <constraint firstItem="VpZ-Iw-dnG" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="21" id="oYS-tr-fQc"/>
+                            <constraint firstItem="lOg-76-rMc" firstAttribute="top" secondItem="snn-8V-O8B" secondAttribute="bottom" constant="35" id="pKh-dX-ZZ3"/>
+                            <constraint firstItem="VpZ-Iw-dnG" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="qOg-eW-Wnd"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="top" secondItem="jEa-FE-Fnf" secondAttribute="top" constant="64" id="umM-3f-NdE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <navigationItem key="navigationItem" title="Kantor" id="eai-K9-9ds">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="Vnc-i1-W4U"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Vnc-i1-W4U"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
