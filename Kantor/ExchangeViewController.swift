@@ -21,10 +21,32 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet  var hideUserInputsButton: UIBarButtonItem!
     
+    var result:(buy: Float, sell: Float) = (0.0, 0.0)
+    
     @IBAction func actionHideUserInputs(_ sender: Any) {
         userAmountTextField.resignFirstResponder()
         navigationItem.rightBarButtonItem = nil
     }
+    
+    
+    @IBAction func actionUserAmountChanged(_ sender: Any) {
+        
+    }
+    
+    
+    @IBAction func actionUpdateInterface() {
+        var displayResult: Float = 0.0
+        if (segmentedControl.selectedSegmentIndex == 0){
+            displayResult = result.sell
+        }
+        else {
+            displayResult = result.buy
+        }
+        exchangeLabel.text = "\(displayResult)"
+        
+    }
+    
+    
     
     
     override func viewDidLoad() {
