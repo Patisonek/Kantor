@@ -31,6 +31,10 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func actionUserAmountChanged(_ sender: Any) {
         
+        result.buy = Float(Int(userAmountTextField.text!)! * 4 )
+        result.sell = Float(Int(userAmountTextField.text!)! * 3 )
+        
+        actionUpdateInterface()
     }
     
     
@@ -53,6 +57,9 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         userAmountTextField.text = "100"
+        
+        actionUserAmountChanged(userAmountTextField)
+        
     }
 
     override func didReceiveMemoryWarning() {
