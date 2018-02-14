@@ -23,6 +23,27 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate {
     
     var result:(buy: Float, sell: Float) = (0.0, 0.0)
     
+    //MARK: View Controller
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        userAmountTextField.text = "100"
+        
+        actionUserAmountChanged(userAmountTextField)
+        
+        let tapGest = UITapGestureRecognizer(target: self, action: #selector(ExchangeViewController.actionHideUserInputs(_:)))
+        self.view.addGestureRecognizer(tapGest)
+        
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: My Methods
+    
     @IBAction func actionHideUserInputs(_ sender: Any) {
         userAmountTextField.resignFirstResponder()
         navigationItem.rightBarButtonItem = nil
@@ -50,25 +71,7 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        userAmountTextField.text = "100"
-        
-        actionUserAmountChanged(userAmountTextField)
-        
-        let tapGest = UITapGestureRecognizer(target: self, action: #selector(ExchangeViewController.actionHideUserInputs(_:)))
-        self.view.addGestureRecognizer(tapGest)
-        
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    // MARK: UITextFieldDelegate Methods
 
     func textFieldDidBeginEditing(_ textField: UITextField) {
         navigationItem.rightBarButtonItem = hideUserInputsButton

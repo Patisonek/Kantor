@@ -13,6 +13,7 @@
 		8467D777202B1C1400B4F240 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8467D775202B1C1400B4F240 /* Main.storyboard */; };
 		8467D779202B1C1400B4F240 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8467D778202B1C1400B4F240 /* Assets.xcassets */; };
 		8467D77C202B1C1400B4F240 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8467D77A202B1C1400B4F240 /* LaunchScreen.storyboard */; };
+		8467D7872034617300B4F240 /* Kantor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467D7862034617300B4F240 /* Kantor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8467D778202B1C1400B4F240 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8467D77B202B1C1400B4F240 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8467D77D202B1C1400B4F240 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8467D7862034617300B4F240 /* Kantor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kantor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +59,47 @@
 			isa = PBXGroup;
 			children = (
 				8467D76F202B1C1400B4F240 /* AppDelegate.swift */,
-				8467D771202B1C1400B4F240 /* ExchangeViewController.swift */,
-				8467D773202B1C1400B4F240 /* AboutViewController.swift */,
-				8467D775202B1C1400B4F240 /* Main.storyboard */,
-				8467D778202B1C1400B4F240 /* Assets.xcassets */,
-				8467D77A202B1C1400B4F240 /* LaunchScreen.storyboard */,
+				8467D785203460F400B4F240 /* Assets */,
+				8467D7882034618200B4F240 /* Models */,
+				8467D7832034608400B4F240 /* ViewControllers */,
+				8467D784203460C000B4F240 /* Interfaces */,
 				8467D77D202B1C1400B4F240 /* Info.plist */,
 			);
 			path = Kantor;
+			sourceTree = "<group>";
+		};
+		8467D7832034608400B4F240 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8467D771202B1C1400B4F240 /* ExchangeViewController.swift */,
+				8467D773202B1C1400B4F240 /* AboutViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8467D784203460C000B4F240 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				8467D775202B1C1400B4F240 /* Main.storyboard */,
+				8467D77A202B1C1400B4F240 /* LaunchScreen.storyboard */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		8467D785203460F400B4F240 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				8467D778202B1C1400B4F240 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		8467D7882034618200B4F240 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8467D7862034617300B4F240 /* Kantor.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +176,7 @@
 			files = (
 				8467D774202B1C1400B4F240 /* AboutViewController.swift in Sources */,
 				8467D770202B1C1400B4F240 /* AppDelegate.swift in Sources */,
+				8467D7872034617300B4F240 /* Kantor.swift in Sources */,
 				8467D772202B1C1400B4F240 /* ExchangeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
