@@ -10,6 +10,27 @@ import UIKit
 
 class Kantor: NSObject {
     
+    override init() {
+        
+        var path = Bundle.main.path(forResource: "currencies", ofType: "plist")
+        
+        if let realPath = path {
+            
+            print("path\(path)")
+            
+            if let list = NSArray(contentsOfFile: path!) as Array <AnyObject>? {
+                
+                for item in list {
+                    print("item: \(item)")
+                }
+            }
+            else {
+                print("Currences file is not found")
+                abort()
+            }
+        }
+    }
+    
     func exchange(amount: Float, currencyCode: String) -> (buy: Float, sell: Float) {
         
         let buy = amount * 3
