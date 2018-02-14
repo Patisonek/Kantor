@@ -23,6 +23,8 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate {
     
     var result:(buy: Float, sell: Float) = (0.0, 0.0)
     
+    var kantor = Kantor()
+    
     //MARK: View Controller
     
     override func viewDidLoad() {
@@ -52,8 +54,10 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func actionUserAmountChanged(_ sender: Any) {
         
-        result.buy = Float(Int(userAmountTextField.text!)! * 4 )
-        result.sell = Float(Int(userAmountTextField.text!)! * 3 )
+        
+        
+        let amount = Float(Int(userAmountTextField.text!)! * 4 )
+        result = kantor.exchange(amount: amount, currencyCode: "USD")
         
         actionUpdateInterface()
     }
