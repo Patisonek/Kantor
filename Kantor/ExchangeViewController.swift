@@ -60,6 +60,9 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate {
         
         actionUserAmountChanged(userAmountTextField)
         
+        let tapGest = UITapGestureRecognizer(target: self, action: #selector(ExchangeViewController.actionHideUserInputs(_:)))
+        self.view.addGestureRecognizer(tapGest)
+        
     }
 
     override func didReceiveMemoryWarning() {
