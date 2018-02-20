@@ -57,10 +57,18 @@ class Kantor: NSObject {
     
     func exchange(amount: Float, currencyCode: String) -> (buy: Float, sell: Float) {
         
-        let buy = amount * 3
-        let sell = amount * 4
+        if let selected = currencies[currencyCode] {
+            
+            let buy = amount * selected.buy
+            let sell = amount * selected.sell
+            
+            
+            return (buy,sell)
+            
+        }
+        print("Currency data is missing for code \(currencyCode)")
+        return (0.0,0.0)
         
-        return (buy,sell)
     }
 
 }
