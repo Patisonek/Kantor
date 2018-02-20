@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct Currency {
+struct Currency : Printable {
     
     var code: String
     var name: String
@@ -43,6 +43,8 @@ class Kantor: NSObject {
                     var conversion = item["conversion"] as! Float
                     
                     let curr = Currency(code: code, name: name, buy: buy, sell: sell, conversion: conversion )
+                    
+                    print("curr\(curr)")
                     
                     currencies.updateValue(curr, forKey: code)
                     
