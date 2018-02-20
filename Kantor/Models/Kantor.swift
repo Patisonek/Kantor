@@ -12,13 +12,13 @@ class Kantor: NSObject {
     
     override init() {
         
-        var path = Bundle.main.path(forResource: "currencies", ofType: "plist")
+        if let path = Bundle.main.path(forResource: "currencies", ofType: "plist") {
         
-        if let realPath = path {
+        
             
             print("path\(path)")
             
-            if let list = NSArray(contentsOfFile: path!) as Array <AnyObject>? {
+            if let list = NSArray(contentsOfFile: path) as Array <AnyObject>? {
                 
                 for item in list {
                     print("item: \(item)")
