@@ -56,8 +56,8 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate {
         
         
         
-        let amount = Float(Int(userAmountTextField.text!)! * 4 )
-        result = kantor.exchange(amount: amount, currencyCode: "USD")
+        let amount = Float(Int(userAmountTextField.text!)! )
+        result = kantor.exchange(amount: amount, currencyCode: "EUR")
         
         actionUpdateInterface()
     }
