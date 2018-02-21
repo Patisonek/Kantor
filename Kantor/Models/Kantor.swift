@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct Currency : Printable {
+struct Currency{
     
     var code: String
     var name: String

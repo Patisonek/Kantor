@@ -8,8 +8,8 @@
 
 import UIKit
 
-class ExchangeViewController: UIViewController, UITextFieldDelegate {
-
+class ExchangeViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+    
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
@@ -20,6 +20,9 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var exchangeLabel: UILabel!
     
     @IBOutlet  var hideUserInputsButton: UIBarButtonItem!
+    
+    @IBOutlet weak var currenciesPickerView: UIPickerView!
+    
     
     var result:(buy: Float, sell: Float) = (0.0, 0.0)
     
@@ -81,7 +84,29 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate {
         navigationItem.rightBarButtonItem = hideUserInputsButton
     }
     
+    // MARK: UIPickerView Metohods
     
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return kantor.currencies.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
+        var allCods = [String] (kantor.currencies.keys)
+        var code = allCods[row]
+        
+        if let currency = kantor.currencies[code] {
+            
+            return "\(currency.name) (\(currency.code))"
+            
+        }
+        return ""
+        
+    }
 
 }
 

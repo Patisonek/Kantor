@@ -69,15 +69,29 @@
                                 <color key="shadowColor" red="0.33333333333333331" green="0.72549019607843135" blue="0.84313725490196079" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bQH-Pc-fcF">
+                                <rect key="frame" x="0.0" y="456" width="375" height="162"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="ocH-C4-DFQ"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="9pv-A4-QxB" id="QUd-wp-vMY"/>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="1U2-Fp-jHs"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="lOg-76-rMc" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="2Bs-mr-Eec"/>
+                            <constraint firstItem="bQH-Pc-fcF" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="3UA-DD-CEt"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="bQH-Pc-fcF" secondAttribute="trailing" id="BOi-hF-5wR"/>
                             <constraint firstItem="snn-8V-O8B" firstAttribute="top" secondItem="VpZ-Iw-dnG" secondAttribute="bottom" constant="35" id="OQL-hS-g1G"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="jEa-FE-Fnf" secondAttribute="trailing" id="QJ3-U6-T2o"/>
                             <constraint firstItem="Vfa-P7-tRx" firstAttribute="baseline" secondItem="snn-8V-O8B" secondAttribute="baseline" id="Qxq-XX-XUt"/>
                             <constraint firstItem="jEa-FE-Fnf" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="aRH-nE-Rnr"/>
                             <constraint firstItem="snn-8V-O8B" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="d7D-Uv-WPG"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="bQH-Pc-fcF" secondAttribute="bottom" id="eAh-Q4-PlU"/>
                             <constraint firstItem="Vfa-P7-tRx" firstAttribute="leading" secondItem="snn-8V-O8B" secondAttribute="trailing" constant="7" id="gsz-g0-lEK"/>
                             <constraint firstItem="jEa-FE-Fnf" firstAttribute="bottom" secondItem="PQr-Ze-W5v" secondAttribute="bottom" constant="49" id="hgn-GM-EmI"/>
                             <constraint firstItem="VpZ-Iw-dnG" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="21" id="oYS-tr-fQc"/>
@@ -95,6 +109,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="currenciesPickerView" destination="bQH-Pc-fcF" id="6DK-ZG-L9Z"/>
                         <outlet property="currencyButton" destination="Vfa-P7-tRx" id="rxv-67-Y6e"/>
                         <outlet property="exchangeLabel" destination="lOg-76-rMc" id="xWO-Py-Ywt"/>
                         <outlet property="hideUserInputsButton" destination="Vnc-i1-W4U" id="3xv-2n-0pI"/>
