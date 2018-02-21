@@ -26,6 +26,8 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate, UIPickerVie
     
     var result:(buy: Float, sell: Float) = (0.0, 0.0)
     
+    var selectedCurrencyCode: String?
+    
     var kantor = Kantor()
     
     //MARK: View Controller
@@ -35,7 +37,7 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         // Do any additional setup after loading the view, typically from a nib.
         userAmountTextField.text = "100"
         
-        actionUserAmountChanged(userAmountTextField)
+        actionExchange()
         
         let tapGest = UITapGestureRecognizer(target: self, action: #selector(ExchangeViewController.actionHideUserInputs(_:)))
         self.view.addGestureRecognizer(tapGest)
@@ -55,14 +57,33 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate, UIPickerVie
     }
     
     
-    @IBAction func actionUserAmountChanged(_ sender: Any) {
-        
-        
+    func actionExchange() {
         
         let amount = Float(Int(userAmountTextField.text!)! )
-        result = kantor.exchange(amount: amount, currencyCode: "EUR")
+        
+        if let code = selectedCurrencyCode {
+            
+            result = kantor.exchange(amount: amount, currencyCode: code)
+            
+        }
+        else {
+            var allCodes = [String] (kantor.currencies.keys)
+            if (allCodes.count > 0 ) {
+                var code = allCodes[0]
+            }
+        }
+        
         
         actionUpdateInterface()
+    }
+    
+    
+    
+    @IBAction func actionUserAmountChanged(_ sender: Any) {
+        
+        actionExchange()
+        
+        
     }
     
     
@@ -106,6 +127,17 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         }
         return ""
         
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        var allCodes = [String] (kantor.currencies.keys)
+        selectedCurrencyCode = allCodes[row]
+        
+        if let code = selectedCurrencyCode {
+            currencyButton.setTitle(code, for: .normal)
+            actionExchange()
+        }
     }
 
 }
