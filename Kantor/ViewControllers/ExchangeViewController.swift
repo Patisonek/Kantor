@@ -95,7 +95,9 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         else {
             displayResult = result.buy
         }
-        exchangeLabel.text = "\(displayResult)"
+        
+        var number = NSNumber(value: displayResult)
+        exchangeLabel.text = kantor.currencyFormatter.string(from: number)
         
     }
     
