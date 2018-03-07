@@ -23,6 +23,7 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate, UIPickerVie
     
     @IBOutlet weak var currenciesPickerView: UIPickerView!
     
+    @IBOutlet weak var updateDateLabel: UILabel!
     
     var result:(buy: Float, sell: Float) = (0.0, 0.0)
     
@@ -51,11 +52,26 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate, UIPickerVie
     
     // MARK: My Methods
     
+    
+    
     @IBAction func actionHideUserInputs(_ sender: Any) {
         userAmountTextField.resignFirstResponder()
         navigationItem.rightBarButtonItem = nil
     }
     
+    func showUpdateDate() {
+        
+        var today = Date()
+        var dateFormatter = DateFormatter()
+        dateFormatter.dateStyle =  .long
+        dateFormatter.timeStyle = .none
+        
+        updateDateLabel.text = dateFormatter.string(for: today)
+        
+        
+        
+        
+    }
     
     func actionExchange() {
         

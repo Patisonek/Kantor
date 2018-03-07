@@ -80,12 +80,20 @@
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="1U2-Fp-jHs"/>
                                 </connections>
                             </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbd-Ae-Lco">
+                                <rect key="frame" x="166.5" y="330" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="lOg-76-rMc" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="2Bs-mr-Eec"/>
                             <constraint firstItem="bQH-Pc-fcF" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="3UA-DD-CEt"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="bQH-Pc-fcF" secondAttribute="trailing" id="BOi-hF-5wR"/>
+                            <constraint firstItem="Vbd-Ae-Lco" firstAttribute="centerX" secondItem="jEa-FE-Fnf" secondAttribute="centerX" id="Ici-aX-LUq"/>
+                            <constraint firstItem="Vbd-Ae-Lco" firstAttribute="top" secondItem="lOg-76-rMc" secondAttribute="bottom" constant="58" id="Lak-J4-W0r"/>
                             <constraint firstItem="snn-8V-O8B" firstAttribute="top" secondItem="VpZ-Iw-dnG" secondAttribute="bottom" constant="35" id="OQL-hS-g1G"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="jEa-FE-Fnf" secondAttribute="trailing" id="QJ3-U6-T2o"/>
                             <constraint firstItem="Vfa-P7-tRx" firstAttribute="baseline" secondItem="snn-8V-O8B" secondAttribute="baseline" id="Qxq-XX-XUt"/>
@@ -114,6 +122,7 @@
                         <outlet property="exchangeLabel" destination="lOg-76-rMc" id="xWO-Py-Ywt"/>
                         <outlet property="hideUserInputsButton" destination="Vnc-i1-W4U" id="3xv-2n-0pI"/>
                         <outlet property="segmentedControl" destination="VpZ-Iw-dnG" id="cY0-Mt-gjE"/>
+                        <outlet property="updateDateLabel" destination="Vbd-Ae-Lco" id="1d5-Aq-CN1"/>
                         <outlet property="userAmountTextField" destination="snn-8V-O8B" id="aqK-18-oS1"/>
                     </connections>
                 </viewController>
