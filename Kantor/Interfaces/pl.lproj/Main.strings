@@ -1,0 +1,24 @@
+
+/* Class = "UIButton"; normalTitle = "USD"; ObjectID = "Vfa-P7-tRx"; */
+"Vfa-P7-tRx.normalTitle" = "USD";
+
+/* Class = "UISegmentedControl"; VpZ-Iw-dnG.segmentTitles[0] = "sell"; ObjectID = "VpZ-Iw-dnG"; */
+"VpZ-Iw-dnG.segmentTitles[0]" = "Sprzedaję";
+
+/* Class = "UISegmentedControl"; VpZ-Iw-dnG.segmentTitles[1] = "buy"; ObjectID = "VpZ-Iw-dnG"; */
+"VpZ-Iw-dnG.segmentTitles[1]" = "Kupuję";
+
+/* Class = "UITabBarItem"; title = "Exchange"; ObjectID = "acW-dT-cKf"; */
+"acW-dT-cKf.title" = "Wymiana";
+
+/* Class = "UINavigationItem"; title = "About"; ObjectID = "c8F-Ql-a94"; */
+"c8F-Ql-a94.title" = "About";
+
+/* Class = "UITabBarItem"; title = "About"; ObjectID = "cPa-gy-q4n"; */
+"cPa-gy-q4n.title" = "Informacje";
+
+/* Class = "UINavigationItem"; title = "Kantor"; ObjectID = "eai-K9-9ds"; */
+"eai-K9-9ds.title" = "Kantor";
+
+/* Class = "UILabel"; text = "10 000"; ObjectID = "lOg-76-rMc"; */
+"lOg-76-rMc.text" = "10 000";
